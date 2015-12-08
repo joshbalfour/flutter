@@ -37,6 +37,8 @@ var flutter = new Flutter({
 });
 
 var app = express();
+var session = require('express-session');
+app.use(session({secret: 'keyboard cat'}));
 
 app.get('/twitter/connect', flutter.connect);
 
